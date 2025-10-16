@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portofolio Ramdan</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f9fafb;
+    }
+
+    #sidebar {
+      background: linear-gradient(180deg, #1e1e1e, #2a2a2a, #3a3a3a);
+      color: white;
+      width: 260px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      box-shadow: 4px 0 15px rgba(0,0,0,0.3);
+      border-right: 2px solid rgba(255,255,255,0.1);
+    }
+
+    #sidebar img {
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    #sidebar img:hover {
+      transform: scale(1.05);
+    }
+
+    #sidebar h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    #sidebar a {
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    #sidebar a:hover {
+      color: #c0a060;
+    }
+
+    section {
+      margin-left: 280px;
+      padding: 60px 40px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 25px;
+      border-left: 5px solid #444;
+      padding-left: 10px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #sidebar a.active {
+      color: #c0a060;
+      font-weight: 600;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sidebar -->
+  <aside id="sidebar">
+    <img src="assets/img/R.jpg" width="120" alt="Ramdan">
+    <h1>Ramdan</h1>
+
+    <div class="flex space-x-4 mb-6 text-2xl">
+      <a href="https://www.instagram.com/den_dadannn/" title="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.tiktok.com/@d4dann_" title="TikTok"><i class="bi bi-tiktok"></i></a>
+      <a href="https://wa.me/qr/3T6GSN2GMUIWE1" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/dadan-ramdan-b5845538a" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/RamdanN7" title="GitHub"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav class="mt-5 text-lg space-y-4 text-center">
+      <a href="#hero" class="block active"><i class="bi bi-house me-2"></i> Home</a>
+      <a href="#pendidikan" class="block"><i class="bi bi-book me-2"></i> Pendidikan</a>
+      <a href="#keahlian" class="block"><i class="bi bi-lightbulb me-2"></i> Keahlian</a>
+      <a href="#pengalaman" class="block"><i class="bi bi-briefcase me-2"></i> Pengalaman</a>
+      <a href="#sertifikasi" class="block"><i class="bi bi-people me-2"></i> Sertifikasi</a>
+      <a href="#contact" class="block"><i class="bi bi-envelope me-2"></i> Kontak</a>
+    </nav>
+  </aside>
+
+  <!-- Hero -->
+  <section id="hero" class="relative h-[400px] flex flex-col items-center justify-center text-white text-center" data-aos="fade-up">
+    <img src="assets/img/hero-bg.jpg" class="absolute inset-0 w-full h-full object-cover brightness-50" alt="">
+    <div class="relative z-10">
+      <h2 class="text-5xl font-bold mb-4">Ramdan</h2>
+      <a href="assets/docs/CV-CREATIVE-RAMDAN-REVISI.pdf" download
+        class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
+        <i class="bi bi-download me-2"></i> Download CV (PDF)
+      </a>
+    </div>
+  </section>
+
+  <!-- Tentang Saya -->
+  <section id="about" data-aos="fade-right">
+    <h2 class="section-title">Tentang Saya</h2>
+    <div class="card">
+      <p>
+        Halo! Saya <strong>Ramdan</strong>,Saya adalah pribadi yang sangat disiplin dan bertanggung jawab, aktif di <strong>Karang Taruna</strong> serta memiliki semangat tinggi dalam bidang IT dan pemrograman. Terampil bekerja dalam tim, berpikir logis, dan berkomitmen mengembangkan kemampuan di bidang teknologi.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pendidikan -->
+  <section id="pendidikan" data-aos="fade-left">
+    <h2 class="section-title">Pendidikan</h2>
+    <div class="card">
+      <ul class="space-y-2">
+        <li><strong>SMKN 1 Kawali</strong> (2023 - 2026) – RPL</li>
+        <li><strong>SMPN 1 Cipaku</strong> (2020 - 2023)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Keahlian -->
+  <section id="keahlian" data-aos="zoom-in">
+    <h2 class="section-title">Keahlian</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3"><i class="bi bi-people-fill me-2"></i>Soft Skill</h3>
+        <ul class="space-y-2">
+          <li><strong>Kerja Sama Tim:</strong> Kemampuan bekerja efektif dalam kelompok.</li>
+          <li><strong>Mengetik:</strong> Mengolah data sederhana secara efisien.</li>
+          <li><strong>Kepribadian:</strong> Disiplin dan tanggung jawab tinggi.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-3"><i class="bi bi-laptop me-2"></i>Hard Skill</h3>
+        <p>Menguasai HTML, CSS, PHP, dan Laravel</p>
+        <div class="prog-icons flex gap-4 mt-4">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="35" alt="HTML">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="35" alt="CSS">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" alt="PHP">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" width="40" alt="Laravel">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pengalaman -->
+  <section id="pengalaman" data-aos="fade-right">
+    <h2 class="section-title">Pengalaman</h2>
+    <div class="card">
+      <ul class="space-y-2">
+        <li><strong>Uji Kompetensi 2025:</strong> Membuat Website Penyewaan Motor</li>
+        <li>Menyusun perancangan menggunakan UML</li>
+        <li>Membuat struktur database – MySQL</li>
+        <li>Menulis & mengelola code berbasis Laravel</li>
+        <li><strong>Pelatihan Membuat Landing Page 2025:</strong> Mempelajari pembuatan halaman web promosi menggunakan HTML, CSS, dan JavaScript dengan tampilan responsif dan menarik.</li>
+        <li><strong>Viera Test 2025:</strong> Uji kemampuan kejuruan berbasis praktik dan teori</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Sertifikasi -->
+  <section id="sertifikasi" data-aos="fade-left">
+    <h2 class="section-title">Sertifikasi</h2>
+    <div class="card">
+      <ul class="space-y-2">
+        <li><strong>Sertifikat Pelatihan Membuat Landing Page (2025)</strong></li>
+        <li>Pelatihan ini berfokus pada pembuatan halaman promosi (landing page) menggunakan HTML, CSS, dan JavaScript. Saya mempelajari cara merancang tampilan yang responsif, menarik, dan efektif dalam menyampaikan informasi produk atau layanan.</li>
+        <li><strong>Sertifikat Dicoding – Belajar Dasar Pemrograman Web (2024)</strong></li>
+        <li>Sertifikasi dari Dicoding yang membahas dasar-dasar pemrograman web menggunakan HTML, CSS, dan JavaScript. Melalui pelatihan ini, saya memahami struktur dan logika dasar dalam membangun sebuah website.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" data-aos="zoom-in">
+    <h2 class="section-title">Kontak</h2>
+    <div class="card">
+      <p>Jika Anda ingin berkolaborasi atau sekadar menyapa, silakan hubungi saya:</p>
+      <ul class="mt-3 space-y-2">
+        <li><i class="bi bi-geo-alt text-gray-700 me-2"></i> Dusun Cinutug, Selacai, Cipaku, Ciamis, Jawa Barat</li>
+        <li><i class="bi bi-telephone text-gray-700 me-2"></i> +62 882-0021-27592</li>
+        <li><i class="bi bi-envelope text-gray-700 me-2"></i> raramdanan@gmail.com</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 bg-gray-100 text-gray-600">
+    © <strong>Ramdan</strong> 2025 — All Rights Reserved
+  </footer>
+
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("#sidebar nav a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) current = section.getAttribute("id");
+      });
+
+      navLinks.forEach((a) => {
+        a.classList.remove("active");
+        if (a.getAttribute("href").includes(current)) {
+          a.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
