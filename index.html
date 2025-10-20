@@ -39,6 +39,8 @@
       padding: 30px 20px;
       box-shadow: 4px 0 15px rgba(0,0,0,0.3);
       border-right: 2px solid rgba(255,255,255,0.1);
+      z-index: 1000;
+      transition: transform 0.3s ease;
     }
 
     #sidebar img {
@@ -102,13 +104,95 @@
       color: #c0a060;
       font-weight: 600;
     }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      background: #1e1e1e;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      #sidebar {
+        transform: translateX(-100%);
+      }
+
+      #sidebar.active {
+        transform: translateX(0);
+      }
+
+      section {
+        margin-left: 0;
+        padding: 60px 20px;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 20px;
+      }
+
+      #hero h2 {
+        font-size: 2.5rem;
+      }
+
+      #hero {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #sidebar h1 {
+        font-size: 1.5rem;
+      }
+
+      #sidebar nav {
+        font-size: 0.9rem;
+      }
+
+      #hero h2 {
+        font-size: 2rem;
+      }
+
+      #hero {
+        height: 250px;
+      }
+
+      .section-title {
+        font-size: 1.3rem;
+      }
+
+      .card {
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 
 <body>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" id="menuToggle">
+    <i class="bi bi-list text-2xl"></i>
+  </button>
+
   <!-- Sidebar -->
   <aside id="sidebar">
-    <img src="assets/img/R.jpg" width="120" alt="Ramdan">
+    <img src="assets/img/ramdan.jpeg" width="120" alt="Ramdan">
     <h1>Ramdan</h1>
 
     <div class="flex space-x-4 mb-6 text-2xl">
@@ -132,9 +216,9 @@
   <!-- Hero -->
   <section id="hero" class="relative h-[400px] flex flex-col items-center justify-center text-white text-center" data-aos="fade-up">
     <img src="assets/img/hero-bg.jpg" class="absolute inset-0 w-full h-full object-cover brightness-50" alt="">
-    <div class="relative z-10">
+    <div class="relative z-10 px-4">
       <h2 class="text-5xl font-bold mb-4">Ramdan</h2>
-      <a href="assets/docs/CV-CREATIVE-RAMDAN-REVISI.pdf" download
+      <a href="assets/docs/CV-CREATIVE-RAMDAN.pdf" download
         class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
         <i class="bi bi-download me-2"></i> Download CV (PDF)
       </a>
@@ -146,7 +230,7 @@
     <h2 class="section-title">Tentang Saya</h2>
     <div class="card">
       <p>
-        Halo! Saya <strong>Ramdan</strong>,Saya adalah pribadi yang sangat disiplin dan bertanggung jawab, aktif di <strong>Karang Taruna</strong> serta memiliki semangat tinggi dalam bidang IT dan pemrograman. Terampil bekerja dalam tim, berpikir logis, dan berkomitmen mengembangkan kemampuan di bidang teknologi.
+       Saya seorang siswa yang sangat disiplin, bertanggung jawab, dan aktif di Karang Taruna. Memiliki minat tinggi di bidang IT dan pemrograman, terampil bekerja dalam tim, serta berpikir logis. Saya berharap dapat terus berkembang dan berkontribusi dalam kemajuan teknologi.
       </p>
     </div>
   </section>
@@ -157,7 +241,7 @@
     <div class="card">
       <ul class="space-y-2">
         <li><strong>SMKN 1 Kawali</strong> (2023 - 2026) – RPL</li>
-        <li><strong>SMPN 1 Cipaku</strong> (2020 - 2023)</li>
+        <p><strong>Jurusan:</strong>Rekayasa Perangkat Lunak(RPL)</p>
       </ul>
     </div>
   </section>
@@ -171,13 +255,19 @@
         <ul class="space-y-2">
           <li><strong>Kerja Sama Tim:</strong> Kemampuan bekerja efektif dalam kelompok.</li>
           <li><strong>Mengetik:</strong> Mengolah data sederhana secara efisien.</li>
-          <li><strong>Kepribadian:</strong> Disiplin dan tanggung jawab tinggi.</li>
+          <li><strong>Pribadi yang baik:</strong> Disiplin dan tanggung jawab tinggi.</li>
         </ul>
       </div>
 
       <div class="card">
         <h3 class="text-2xl font-semibold text-gray-800 mb-3"><i class="bi bi-laptop me-2"></i>Hard Skill</h3>
-        <p>Menguasai HTML, CSS, PHP, dan Laravel</p>
+        <ul class="space-y-2">
+          <li><strong>HTML:</strong>Mahir</li>
+          <li><strong>CSS:</strong>Menengah.</li>
+          <li><strong>PHP:</strong>Menengah</li>
+          <li><strong>Laravel:</strong>Menengah</li>
+        </ul>
+
         <div class="prog-icons flex gap-4 mt-4">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="35" alt="HTML">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="35" alt="CSS">
@@ -193,6 +283,8 @@
     <h2 class="section-title">Pengalaman</h2>
     <div class="card">
       <ul class="space-y-2">
+        <li><Strong>Praktek Kerja Lapangan di PT Inovindo Digital Media Oktober-February 2025:</Strong></li>
+        <li> Melaksanakan kegiatan Praktik Kerja Lapangan untuk menambah pengalaman dan wawasan di bidang teknologi informasi, khususnya dalam pengembangan dan perancangan sistem berbasis web.</li>
         <li><strong>Uji Kompetensi 2025:</strong> Membuat Website Penyewaan Motor</li>
         <li>Menyusun perancangan menggunakan UML</li>
         <li>Membuat struktur database – MySQL</li>
@@ -203,18 +295,31 @@
     </div>
   </section>
 
-  <!-- Sertifikasi -->
-  <section id="sertifikasi" data-aos="fade-left">
-    <h2 class="section-title">Sertifikasi</h2>
-    <div class="card">
-      <ul class="space-y-2">
-        <li><strong>Sertifikat Pelatihan Membuat Landing Page (2025)</strong></li>
-        <li>Pelatihan ini berfokus pada pembuatan halaman promosi (landing page) menggunakan HTML, CSS, dan JavaScript. Saya mempelajari cara merancang tampilan yang responsif, menarik, dan efektif dalam menyampaikan informasi produk atau layanan.</li>
-        <li><strong>Sertifikat Dicoding – Belajar Dasar Pemrograman Web (2024)</strong></li>
-        <li>Sertifikasi dari Dicoding yang membahas dasar-dasar pemrograman web menggunakan HTML, CSS, dan JavaScript. Melalui pelatihan ini, saya memahami struktur dan logika dasar dalam membangun sebuah website.</li>
-      </ul>
-    </div>
-  </section>
+ <!-- Sertifikasi -->
+<section id="sertifikasi" data-aos="fade-left">
+  <h2 class="section-title">Sertifikasi</h2>
+  <div class="card">
+    <ul class="space-y-4">
+      <!-- Sertifikat 1 -->
+      <li>
+        <strong>Sertifikat Pelatihan Membuat Landing Page (2025)</strong><br>
+        <span>Pelatihan ini berfokus pada pembuatan halaman promosi menggunakan HTML, CSS, dan JavaScript dengan tampilan responsif dan menarik.</span><br>
+        <a href="http://bit.ly/4hjcwqs" target="_blank" class="text-yellow-600 hover:underline flex items-center gap-1 mt-1">
+          <i class="bi bi-box-arrow-up-right"></i> Lihat Sertifikat
+        </a>
+      </li>
+
+      <!-- Sertifikat 2 -->
+      <li>
+        <strong>Sertifikat Dicoding – Belajar Dasar Pemrograman Web (2024)</strong><br>
+        <span>Sertifikasi dari Dicoding yang membahas dasar-dasar pemrograman web menggunakan HTML, CSS, dan JavaScript.</span><br>
+        <a href="http://bit.ly/43vmRdh" target="_blank" class="text-yellow-600 hover:underline flex items-center gap-1 mt-1">
+          <i class="bi bi-box-arrow-up-right"></i> Lihat Sertifikat
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
 
   <!-- Kontak -->
   <section id="contact" data-aos="zoom-in">
@@ -236,8 +341,26 @@
   <script>
     AOS.init({ duration: 1000, once: true });
 
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    // Close sidebar when clicking on a link (mobile)
+    const navLinks = document.querySelectorAll('#sidebar nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          sidebar.classList.remove('active');
+        }
+      });
+    });
+
+    // Handle active section highlighting
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("#sidebar nav a");
 
     window.addEventListener("scroll", () => {
       let current = "";
@@ -252,6 +375,13 @@
           a.classList.add("active");
         }
       });
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        sidebar.classList.remove('active');
+      }
     });
   </script>
 </body>
